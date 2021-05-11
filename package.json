@@ -1,0 +1,25 @@
+{
+    "name": "subheaven-arg",
+    "version": "0.1.0",
+    "description": "Processador de argumentos",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "bin": {
+        "teste1": "./hello1.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SubHeaven/subheaven-arg.git"
+    },
+    "author": {
+        "name": "SubHeaven",
+        "email": "subheaven.paulo@gmail.com"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/SubHeaven/subheaven-arg/issues"
+    },
+    "homepage": "https://github.com/SubHeaven/subheaven-arg#readme"
+}
