@@ -6,9 +6,6 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "bin": {
-        "teste1": "./hello1.js"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/SubHeaven/subheaven-arg.git"
