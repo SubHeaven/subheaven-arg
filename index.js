@@ -16,6 +16,7 @@ module.exports = (() => {
     };
 
     this.positional = function(name, description, options = {}) {
+        let alt_name = options.alt_name ? options.alt_name : name.split('-').join('_');
         this.options.pos[name] = {
             name: name,
             description: description,
@@ -33,6 +34,9 @@ module.exports = (() => {
                 validated = true;
             }
         }
+        if (alt_name !== name) {
+            this.params[alt_name] = this.params[name];
+        }
         if (this.params[name] == "" && options.required) {
             this._errors.push(`O parâmetro ${name} é obrigatório!`);
         }
@@ -41,6 +45,7 @@ module.exports = (() => {
         }
     };
     this.named = function(name, description, options = {}) {
+        let alt_name = options.alt_name ? options.alt_name : name.split('-').join('_');
         this.options.named[name] = {
             name: name,
             description: description,
@@ -61,6 +66,9 @@ module.exports = (() => {
                 }
             }
         }
+        if (alt_name !== name) {
+            this.params[alt_name] = this.params[name];
+        }
         if (this.params[name] == "" && options.required) {
             this._errors.push(`O parâmetro ${name} é obrigatório!`);
         }
@@ -69,6 +77,7 @@ module.exports = (() => {
         }
     };
     this.boolean = function(name, description, options = {}) {
+        let alt_name = options.alt_name ? options.alt_name : name.split('-').join('_');
         this.options.bool[name] = {
             name: name,
             description: description,
@@ -84,6 +93,9 @@ module.exports = (() => {
                     }
                 }
             }
+        }
+        if (alt_name !== name) {
+            this.params[alt_name] = this.params[name];
         }
     };
     this.validate = function() {
