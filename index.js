@@ -10,7 +10,8 @@ module.exports = (() => {
     this._errors = [];
     this._help = this.args.length > 0 && ["?", "help", "-h", "ajuda"].indexOf(this.args[0]) > -1;
 
-    this.description = function(description) {
+    this.init = function(name, description) {
+        this.name = name;
         this.description = description;
         this._help = this.args.length > 0 && ["?", "help", "-h", "ajuda"].indexOf(this.args[0]) > -1;
     };
@@ -118,7 +119,7 @@ module.exports = (() => {
         }
     };
     this.help = function() {
-        let base_com = __filename.slice(__dirname.length + 1, -3);
+        let base_com = this.name ? this.name : __filename.slice(__dirname.length + 1, -3);
         let optionals = [];
         console.log(this.description);
         console.log("");

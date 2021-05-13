@@ -1,6 +1,6 @@
 const argParse = require('./index');
 
-argParse.description("Cumprimenta alguém");
+argParse.init("subheaven-arg", "Cumprimenta alguém");
 argParse.boolean("show-config", "Mostra a configuração atual de banco de dados");
 argParse.boolean("show-config-com-alt", "Mostra a configuração atual de banco de dados", { alt_name: 'configComAlt' });
 (async() => {
