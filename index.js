@@ -101,7 +101,7 @@ module.exports = (() => {
     };
     this.validate = function() {
         if (this._help) {
-            this.help();
+            this.showHelp();
             return false;
         }
         if (this._valid) {
@@ -113,12 +113,12 @@ module.exports = (() => {
                 console.log("");
                 console.log("Ajuda:");
                 console.log("");
-                this.help();
+                this.showHelp();
             }
             return false;
         }
     };
-    this.help = function() {
+    this.showHelp = function() {
         let base_com = this.name ? this.name : __filename.slice(__dirname.length + 1, -3);
         let optionals = [];
         console.log(this.description);
