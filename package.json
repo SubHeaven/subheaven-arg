@@ -1,5 +1,5 @@
 {
-    "name": "@SubHeaven/subheaven-arg",
+    "name": "subheaven-arg",
     "version": "0.2.1",
     "description": "Processador de argumentos",
     "main": "index.js",
