@@ -1,8 +1,7 @@
 name: Node.js Package
 
 on:
-  release:
-    types: [created]
+  release
 
 jobs:
   build:
@@ -15,19 +14,16 @@ jobs:
       - run: npm ci
       - run: npm test
 
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: read
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://npm.pkg.github.com/
-      - run: npm ci
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: 63052700-152a-4096-ab28-3e9e0b882138
+  publish-npm:
+      name: Publish NPM
+      needs: test
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v1
+        - uses: actions/setup-node@v1
+          with:
+            node-version: 12
+            registry-url: https://registry.npmjs.org/
+        - run: npm publish
+          env:
+            NODE_AUTH_TOKEN: 63052700-152a-4096-ab28-3e9e0b882138
