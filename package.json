@@ -1,10 +1,10 @@
 {
-    "name": "subheaven-arg",
+    "name": "@SubHeaven/subheaven-arg",
     "version": "0.2.1",
     "description": "Processador de argumentos",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "exit 0"
     },
     "repository": {
         "type": "git",
