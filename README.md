@@ -41,19 +41,4 @@ Exemplo de uso:
     my-module "SubHeaven"
     my-module "SubHeaven" emote="XD"
     my-module "SubHeaven" emote="XD" --booleano
-CLI de teste do processamento de argumentos
-
-Parâmetros posicionais:
-    name = Nome da pessoa a ser cumprimentada
-
-Parâmetros nomeados:
-    emote = (Opcional) Emoticon usado na cumprimentação
-
-Parâmetros booleanos:
-    booleano = Indica se o parâmetro booleano foi informado
-
-Exemplo de uso:
-    my-module "SubHeaven"
-    my-module "SubHeaven" emote="XD"
-    my-module "SubHeaven" emote="XD" --booleano
 ```
